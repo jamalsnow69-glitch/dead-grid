@@ -20,6 +20,6 @@ export const initialGameState = {
   },
   log: [
     "Dead Grid initialized.",
-    "Fifteen years after the power died."
+    "Just Awoke in a New World..."
   ]
 };
