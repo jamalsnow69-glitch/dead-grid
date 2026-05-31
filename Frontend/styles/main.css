@@ -1,1 +1,117 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #172018, #030504 70%);
+  color: #d8f5dc;
+  font-family: Consolas, monospace;
+}
 
+.app-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title-panel {
+  text-align: center;
+  border-bottom: 1px solid #2cff88;
+  margin-bottom: 18px;
+}
+
+.title-panel h1 {
+  color: #2cff88;
+  letter-spacing: 8px;
+  font-size: 48px;
+}
+
+.panel {
+  background: rgba(0, 0, 0, 0.68);
+  border: 1px solid #214d35;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 18px rgba(44, 255, 136, 0.12);
+}
+
+.hud-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 16px;
+}
+
+.log-panel {
+  grid-column: span 2;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+button {
+  background: #07120c;
+  color: #2cff88;
+  border: 1px solid #2cff88;
+  padding: 10px 14px;
+  margin-right: 8px;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #2cff88;
+  color: #031006;
+}
+
+.item-row {
+  border: 1px solid #315c42;
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background: #07120c;
+}
+
+.dev-console-panel {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 350px;
+  background: rgba(0, 0, 0, 0.94);
+  border: 1px solid #2cff88;
+  color: #d8f5dc;
+  padding: 16px;
+  border-radius: 10px;
+  z-index: 9999;
+  box-shadow: 0 0 25px rgba(44, 255, 136, 0.25);
+}
+
+.console-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.dev-console-panel input {
+  width: 100%;
+  background: #050706;
+  color: #2cff88;
+  border: 1px solid #214d35;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .log-panel {
+    grid-column: span 1;
+  }
+
+  .title-panel h1 {
+    font-size: 34px;
+  }
+}
