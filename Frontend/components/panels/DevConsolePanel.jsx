@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { checkDevPassword, runConsoleCommand } from "../../game/consoleSystem";
+import { checkDevPassword, runConsoleCommand } from "../../game/consoleSystem.js";
 
 export default function DevConsolePanel({ game, setGame, addLog }) {
   const [open, setOpen] = useState(false);
