@@ -2,6 +2,8 @@ import { useState } from "react";
 import { initialGameState } from "./game/initialState";
 import HUDPanel from "./components/panels/HUDPanel";
 import DevConsolePanel from "./components/panels/DevConsolePanel";
+import InventoryPanel from "./components/panels/InventoryPanel";
+import LocationPanel from "./components/panels/LocationPanel";
 
 export default function App() {
   const [game, setGame] = useState(initialGameState);
@@ -23,29 +25,8 @@ export default function App() {
       <HUDPanel game={game} />
 
       <main className="game-layout">
-        <section className="panel">
-          <h2>{game.location}</h2>
-          <p>
-            A dead suburb swallowed by weeds. The old world is silent, but not empty.
-          </p>
-
-          <button onClick={() => addLog("You searched the ruins.")}>
-            Scavenge
-          </button>
-
-          <button onClick={() => addLog("You listened to the dead air.")}>
-            Listen
-          </button>
-        </section>
-
-        <section className="panel">
-          <h2>Inventory</h2>
-          {Object.entries(game.inventory).map(([item, amount]) => (
-            <div key={item} className="item-row">
-              {item}: {amount}
-            </div>
-          ))}
-        </section>
+        <LocationPanel game={game} addLog={addLog} />
+        <InventoryPanel inventory={game.inventory} />
 
         <section className="panel log-panel">
           <h2>Log</h2>
