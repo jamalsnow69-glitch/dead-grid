@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  background: #030504;
+  color: #d8f5dc;
+  font-family: Consolas, monospace;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title-panel {
+  text-align: center;
+  border-bottom: 1px solid #2cff88;
+  margin-bottom: 18px;
+}
+
+.title-panel h1 {
+  color: #2cff88;
+  letter-spacing: 8px;
+  font-size: 48px;
+}
+
+.panel {
+  background: rgba(0, 0, 0, 0.68);
+  border: 1px solid #214d35;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.game-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 16px;
+}
+
+button {
+  background: #07120c;
+  color: #2cff88;
+  border: 1px solid #2cff88;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
