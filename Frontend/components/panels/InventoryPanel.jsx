@@ -1,4 +1,4 @@
-import { ITEMS } from "../../data/items";
+import { ITEMS } from "../../data/items.js";
 
 export default function InventoryPanel({ inventory }) {
   return (
@@ -11,7 +11,7 @@ export default function InventoryPanel({ inventory }) {
         return (
           <div key={itemId} className="item-row">
             <strong>{item?.name || itemId}</strong>
-            <span>x{amount}</span>
+            <span> x{amount}</span>
             <p>{item?.description || "Unknown item."}</p>
           </div>
         );
