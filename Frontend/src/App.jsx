@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { initialGameState } from "./game/initialState";
-import HUDPanel from "./components/panels/HUDPanel";
-import DevConsolePanel from "./components/panels/DevConsolePanel";
-import InventoryPanel from "./components/panels/InventoryPanel";
-import LocationPanel from "./components/panels/LocationPanel";
+import { initialGameState } from "./game/initialState.js";
+import HUDPanel from "./components/panels/HUDPanel.jsx";
+import DevConsolePanel from "./components/panels/DevConsolePanel.jsx";
+import InventoryPanel from "./components/panels/InventoryPanel.jsx";
+import LocationPanel from "./components/panels/LocationPanel.jsx";
 
 export default function App() {
   const [game, setGame] = useState(initialGameState);
